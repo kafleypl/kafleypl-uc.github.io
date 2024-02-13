@@ -11,21 +11,41 @@
 </head>
 <body>
     <header>
-        <h1>Pushpa Kafley</h1>
-        <div id="navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="course.html">Web Application Programming and Hacking Course</a></li>
-            </ul>
-        </div>
+        <h1>Welcome to Pushpa Kafley Personal Website</h1>
     </header>
     <main>
         <section id="about">
-            <h2>About Me</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>About Me</h2>
+                        <p>I am Pushpa Kafley, a dedicated and highly motivated individual in the field of Information Technology. Currently pursuing a Master of Science in Infromation Tecnology at University of Cinccinnati, I am passionate about cybersecurity and risk management, cloud services and DevOps practices.</p>
+                        <p>Contact me at: <a href="kafleypl@mail.uc.edu">kafleypl@mail.uc.edu</a></p>
+                        <div id="digit-clock"></div>
+            <script>
+                function displayTime() {
+                    document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
+                }
+
+                setInterval(displayTime, 500);
+            </script>
+        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="kafley-pl.png" alt="Pushpa Kafley">
+                        <canvas id="analog-clock" width="150" height="150" style="background: #999"></canvas>
+            <script src="analog-clock.js"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id ="Education"
+            <div class="container"
             <p>Master of Science in Information Technology</p>
-            <p>University of Cincinnati</p>
+            <p>University of Cincinnati 2023-Present</p>
             <p>Bachelor’s Computer Science and Information Technology</p>
-            <p>Tribhuvan University, Dharan, Nepal</p>
+            <p>Tribhuvan University, Dharan, Nepal 2009</p>
+            </div>
         </section>
         <section id="skills">
             <h2>Skills & Competencies</h2>
@@ -35,11 +55,11 @@
                 <li>Cloud Services: AWS Services (EC2, VPC, S3, Route53, IAM, RDS, EKS, ECR, & Lambda)</li>
                 <li>Orchestration: Docker Swarm & Kubernetes</li>
                 <li>Database: SQL Server, PostgreSQL, Oracle</li>
-                <li>Scripting Language: Python, Groovy, Ruby, YAML, SQL, .Net, PowerShell</li>
+                <li>Familiar with: Python, Groovy, Ruby, YAML, SQL, .Net, css, html, Javascript, PowerShell</li>
                 <li>Agile Methodology: Scrum/Kanban</li>
             </ul>
         </section>
-        <section id="experience">
+        <section id="Professional Experience">
             <h2>Professional Experience</h2>
             <p>DevOps Engineer</p>
             <p>Turning Stone, Oneida, NY</p>
@@ -47,7 +67,6 @@
             <ul>
                 <li>Implemented an automated provisioning system, reducing deployment times by 20% across diverse environments.</li>
                 <li>Led a team of 7 in managing Software Configuration, Build & Release, ensuring seamless Agile processes.</li>
-                <li>Achieved a 15% improvement in software release cycles, maintaining high-quality deliverables in an Agile framework.</li>
                 <li>Successfully executed changes leveraging Kubernetes and Docker on AWS, resulting significant enhancement in application performance.</li>
                 <li>Familiarized with Jenkins, Nexus, GitHub, Terraform, Ansible, Python, Groovy, Linux, PowerShell, Shell scripting, Bash.</li>
             </ul>
