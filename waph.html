@@ -1,91 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Professional Profile</title>
-    <!-- Include CSS framework -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushpa Kafley - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Your Name</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header section with name and headshot -->
-    <header class="bg-primary text-white text-center py-5">
-        <div class="container">
-            <img src="path_to_your_headshot_image.jpg" alt="Headshot" class="rounded-circle mb-3" width="200">
-            <h1 class="display-4">Your Name</h1>
-            <p class="lead">Professional Profile</p>
+    <header>
+        <h1>Pushpa Kafley</h1>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="course.html">Web Application Programming and Hacking Course</a>
         </div>
     </header>
-
-    <!-- About section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum metus metus, id lobortis lacus fermentum ut. Sed sagittis nunc eget massa vulputate semper. Fusce sit amet enim bibendum, semper risus at, iaculis arcu. Curabitur nec nunc ultrices, efficitur orci vitae, aliquam mauris.</p>
-        </div>
-    </section>
-
-    <!-- Experience section -->
-    <section id="experience" class="py-5">
-        <div class="container">
-            <h2>Experience</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum metus metus, id lobortis lacus fermentum ut. Sed sagittis nunc eget massa vulputate semper. Fusce sit amet enim bibendum, semper risus at, iaculis arcu. Curabitur nec nunc ultrices, efficitur orci vitae, aliquam mauris.</p>
-        </div>
-    </section>
-
-    <!-- Skills section -->
-    <section id="skills" class="py-5">
-        <div class="container">
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="kafley-pl.jpg" alt="Pushpa Kafley Headshot">
+            <p>Master of Science in Information Technology</p>
+            <p>University of Cincinnati</p>
+            <p>Bachelor’s Computer Science and Information Technology</p>
+            <p>Tribhuvan University, Dharan, Nepal</p>
+        </section>
+        <section id="skills">
             <h2>Skills</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum metus metus, id lobortis lacus fermentum ut. Sed sagittis nunc eget massa vulputate semper. Fusce sit amet enim bibendum, semper risus at, iaculis arcu. Curabitur nec nunc ultrices, efficitur orci vitae, aliquam mauris.</p>
-        </div>
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact" class="py-5">
-        <divclass="container">
-            <h2>Contact</h2>
-            <p>Email: your@email.com</p>
-            <p>Phone: 123-456-7890</p>
-        </div>
-    </section>
-
-    <!-- Footer section -->
-    <footer class="bg-light text-center py-3">
-        <div class="container">
-            &copy; 2024 Your Name
-        </div>
+            <ul>
+                <li>Cybersecurity and Risk Management</li>
+                <li>Version Control System: Git</li>
+                <li>Cloud Services: AWS</li>
+                <li>Orchestration: Docker Swarm & Kubernetes</li>
+                <li>Database: SQL Server, PostgreSQL, Oracle</li>
+                <li>Familiar with: Python, Groovy, Ruby, YAML, SQL, .Net, html, css, PowerShell</li>
+                <li>Agile Methodology: Scrum/Kanban</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <p>DevOps Engineer</p>
+            <p>Turning Stone, Oneida, NY</p>
+            <p>March 2010 - August 2014</p>
+            <ul>
+                <li>Implemented an automated provisioning system, reducing deployment times by 20% across diverse environments.</li>
+                <li>Led a team of 7 in managing Software Configuration, Build & Release, ensuring seamless Agile processes.</li>
+                <li>Achieved a 15% improvement in software release cycles, maintaining high-quality deliverables in an Agile framework.</li>
+                <li>Successfully executed changes leveraging Kubernetes and Docker on AWS, resulting significant enhancement in application performance.</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Student Marketplace</p>
+            <p>Table Games Supervisor, Hard Rock Casino, Cincinnati, OH</p>
+            <p>HCI/UX design Project, University of Cincinnati</p>
+        </section>
+        <section id="leadership">
+            <h2>Leadership & Extracurricular</h2>
+            <p>Program Coordinator, Bhutanese Community, Des Moines, IA (Non-Profit)</p>
+            <p>President & Program Director, Youth Friendship Center (YFC), Jhapa, Nepal (Non-Profit)</p>
+        </section>
+    </main>
+    <footer>
+        <p>Contact: Phone: (315) 368-5420 | Email: kafleypl@mail.uc.edu</p>
     </footer>
-
-    <!-- Include JavaScript libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!-- Include your custom JavaScript code -->
-    <script src="script.js"></script>
 </body>
 </html>
