@@ -7,11 +7,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Pushpa Kafley Personal Website</h1>
+        <h1>Welcome to Pushpa Kafley's Personal Website</h1>
     </header>
     <main>
         <section id="about">
@@ -19,90 +19,102 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2>About Me</h2>
-                        <p>I am Pushpa Kafley, a dedicated and highly motivated individual in the field of Information Technology. Currently pursuing a Master of Science in Infromation Tecnology at University of Cinccinnati, I am passionate about cybersecurity and risk management, cloud services and DevOps practices.</p>
-                        <p>Contact me at: <a href="kafleypl@mail.uc.edu">kafleypl@mail.uc.edu</a></p>
+                        <p>I am Pushpa Kafley, a dedicated and highly motivated individual in the field of Information Technology. Currently pursuing a Master of Science in Information Technology at University of Cincinnati, I am passionate about cybersecurity and risk management, cloud services, and DevOps practices.</p>
+                        <p>Contact me at: <a href="mailto:kafleypl@mail.uc.edu">kafleypl@mail.uc.edu</a></p>
                         <div id="digit-clock"></div>
-            <script>
-                function displayTime() {
-                    document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
-                }
+                        <script>
+                            function displayTime() {
+                                document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
+                            }
 
-                setInterval(displayTime, 500);
-            </script>
-        </div>
+                            setInterval(displayTime, 500);
+                        </script>
                     </div>
                     <div class="col-md-6">
-                        <img src="kafley-pl.png" alt="Pushpa Kafley">
+                        <img src="kafley-pl.jpg" alt="Pushpa Kafley">
                         <canvas id="analog-clock" width="150" height="150" style="background: #999"></canvas>
-            <script src="analog-clock.js"></script>
+                        <script src="analog-clock.js"></script>
                     </div>
                 </div>
             </div>
         </section>
-        <section id ="Education"
-            <div class="container"
-            <p>Master of Science in Information Technology</p>
-            <p>University of Cincinnati 2023-Present</p>
-            <p>Bachelor’s Computer Science and Information Technology</p>
-            <p>Tribhuvan University, Dharan, Nepal 2009</p>
+        <section id="Education">
+            <div class="container">
+                <h2>Education</h2>
+                <p>Master of Science in Information Technology</p>
+                <p>University of Cincinnati (2023-Present)</p>
+                <p>Bachelor’s Computer Science and Information Technology</p>
+                <p>Tribhuvan University, Dharan, Nepal (2009)</p>
             </div>
         </section>
         <section id="skills">
-            <h2>Skills & Competencies</h2>
-            <ul>
-                <li>Cybersecurity and Risk Management</li>
-                <li>Version Control System: Git (GitHub, Bitbucket)</li>
-                <li>Cloud Services: AWS Services (EC2, VPC, S3, Route53, IAM, RDS, EKS, ECR, & Lambda)</li>
-                <li>Orchestration: Docker Swarm & Kubernetes</li>
-                <li>Database: SQL Server, PostgreSQL, Oracle</li>
-                <li>Familiar with: Python, Groovy, Ruby, YAML, SQL, .Net, css, html, Javascript, PowerShell</li>
-                <li>Agile Methodology: Scrum/Kanban</li>
-            </ul>
+            <div class="container">
+                <h2>Skills & Competencies</h2>
+                <ul>
+                    <li>Cybersecurity and Risk Management</li>
+                    <li>Version Control System: Git (GitHub, Bitbucket)</li>
+                    <li>Cloud Services: AWS Services (EC2, VPC, S3, Route53, IAM, RDS, EKS, ECR, & Lambda)</li>
+                    <li>Orchestration: Docker Swarm & Kubernetes</li>
+                    <li>Database: SQL Server, PostgreSQL, Oracle</li>
+                    <li>Familiar with: Python, Groovy, Ruby, YAML, SQL, .Net, css, html, Javascript, PowerShell</li>
+                    <li>Agile Methodology: Scrum/Kanban</li>
+                </ul>
+            </div>
         </section>
         <section id="Professional Experience">
-            <h2>Professional Experience</h2>
-            <p>DevOps Engineer</p>
-            <p>Turning Stone, Oneida, NY</p>
-            <p>March 2010 - August 2014</p>
-            <ul>
-                <li>Implemented an automated provisioning system, reducing deployment times by 20% across diverse environments.</li>
-                <li>Led a team of 7 in managing Software Configuration, Build & Release, ensuring seamless Agile processes.</li>
-                <li>Successfully executed changes leveraging Kubernetes and Docker on AWS, resulting significant enhancement in application performance.</li>
-                <li>Familiarized with Jenkins, Nexus, GitHub, Terraform, Ansible, Python, Groovy, Linux, PowerShell, Shell scripting, Bash.</li>
-            </ul>
+            <div class="container">
+                <h2>Professional Experience</h2>
+                <p>DevOps Engineer</p>
+                <p>Turning Stone, Oneida, NY</p>
+                <p>March 2010 - August 2014</p>
+                <ul>
+                    <li>Implemented an automated provisioning system, reducing deployment times by 20% across diverse environments.</li>
+                    <li>Led a team of 7 in managing Software Configuration, Build & Release, ensuring seamless Agile processes.</li>
+                    <li>Successfully executed changes leveraging Kubernetes and Docker on AWS, resulting significant enhancement in application performance.</li>
+                    <li>Familiarized with Jenkins, Nexus, GitHub, Terraform, Ansible, Python, Groovy, Linux, PowerShell, Shell scripting, Bash.</li>
+                </ul>
+            </div>
         </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Student Marketplace</p>
-            <p>Table Games Supervisor, Hard Rock Casino, Cincinnati, OH</p>
-            <p>HCI/UX design Project, University of Cincinnati</p>
+        <section id="Projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <p>Student Marketplace</p>
+                <p>Table Games Supervisor, Hard Rock Casino, Cincinnati, OH</p>
+                <p>HCI/UX design Project, University of Cincinnati</p>
+            </div>
         </section>
-        <section id="leadership">
-            <h2>Leadership & Extracurricular</h2>
-            <p>Program Coordinator</p>
-            <p>Bhutanese Community, Des Moines, IA (Non-Profit)</p>
-            <p>January 2015 - June 2017</p>
-            <ul>
-                <li>Organized data for decision-making, supervised and mentored over 2000 youths, and managed budgeting and funds for community programs.</li>
-            </ul>
-            <p>President & Program Director</p>
-            <p>Youth Friendship Center (YFC), Jhapa, Nepal (Non-profit)</p>
-            <p>November 2006 - May 2008</p>
-            <ul>
-                <li>Directed drug intervention programs for over a thousand youths, controlled a $20,000 budget annually for three years, and facilitated successful drug rehabilitation programs for over 500 youths.</li>
-            </ul>
+        <section id="Leadership">
+            <div class="container">
+                <h2>Leadership & Extracurricular</h2>
+                <p>Program Coordinator</p>
+                <p>Bhutanese Community, Des Moines, IA (Non-Profit)</p>
+                <p>January 2015 - June 2017</p>
+                <ul>
+                    <li>Organized data for decision-making, supervised and mentored over 2000 youths, and managed budgeting and funds for community programs.</li>
+                </ul>
+                <p>President & Program Director</p>
+                <p>Youth Friendship Center (YFC), Jhapa, Nepal (Non-profit)</p>
+                <p>November 2006 - May 2008</p>
+                <ul>
+                    <li>Directed drug intervention programs for over a thousand youths, controlled a $20,000 budget annually for three years, and facilitated successful drug rehabilitation programs for over 500 youths.</li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
         <!-- Email and Phone Number (Show/Hide functionality) -->
-        <p id="contact-info">Contact: <span id="email">kafleypl@mail.uc.edu</span> | <span id="phone">(315) 368-5420</span></p>
-        <button onclick="toggleContact()">Toggle Contact Info</button>
+        <div class="container">
+            <p id="contact-info">Contact: <span id="email">kafleypl@mail.uc.edu</span> | <span id="phone">(315) 368-5420</span></p>
+            <button onclick="toggleContact()">Toggle Contact Info</button>
+        </div>
         <!-- Page Tracker -->
-        <p>Page Tracker:</p>
-        <ul>
-            <li><a href="https://analytics.withgoogle.com/">Google Analytics</a></li>
-            <li><a href="https://flagcounter.com/">Flag Counter</a></li>
-        </ul>
+        <div class="container">
+            <p>Page Tracker:</p>
+            <ul>
+                <li><a href="https://analytics.withgoogle.com/">Google Analytics</a></li>
+                <li><a href="https://flagcounter.com/">Flag Counter</a></li>
+            </ul>
+        </div>
     </footer>
 
     <!-- Bootstrap JS (optional) -->
@@ -111,17 +123,61 @@
     <!-- Custom JavaScript -->
     <script>
         function toggleContact() {
-            var email = document.getElementById("email");
-            var phone = document.getElementById("phone");
-
-            if (email.style.display === "none") {
-                email.style.display = "inline";
-                phone.style.display = "inline";
+            var email = document.getElementById('email');
+            var phone = document.getElementById('phone');
+            if (email.style.display === 'none') {
+                email.style.display = 'inline';
+                phone.style.display = 'inline';
             } else {
-                email.style.display = "none";
-                phone.style.display = "none";
+                email.style.display = 'none';
+                phone.style.display = 'none';
             }
         }
+    </script>
+    <!-- Joke API Integration -->
+    <script>
+        function fetchJoke() {
+            fetch('https://v2.jokeapi.dev/joke/Any')
+                .then(response => response.json())
+                .then(data => {
+                    // Display the joke on the page
+                    document.getElementById('joke').innerHTML = data.setup + ' ' + data.delivery;
+                })
+                .catch(error => console.error('Error fetching joke:', error));
+        }
+
+        // Fetch joke every minute
+        setInterval(fetchJoke, 60000);
+
+        // Initial fetch when the page loads
+        fetchJoke();
+    </script>
+    <!-- Public API with Graphics Integration -->
+    <script>
+        fetch('https://xkcd.com/info.0.json')
+            .then(response => response.json())
+            .then(data => {
+                // Display the comic image on the page
+                document.getElementById('comic').src = data.img;
+                document.getElementById('comic').alt = data.alt;
+            })
+            .catch(error => console.error('Error fetching comic:', error));
+    </script>
+    <!-- JavaScript Cookies -->
+    <script>
+        function checkFirstVisit() {
+            var lastVisit = localStorage.getItem('lastVisit');
+            if (lastVisit) {
+                document.getElementById('welcome-message').innerText = 'Welcome back! Your last visit was ' + lastVisit;
+            } else {
+                var currentDate = new Date().toLocaleString();
+                localStorage.setItem('lastVisit', currentDate);
+                document.getElementById('welcome-message').innerText = 'Welcome to my homepage!';
+            }
+        }
+
+        // Check first visit when the page loads
+        checkFirstVisit();
     </script>
 </body>
 </html>
