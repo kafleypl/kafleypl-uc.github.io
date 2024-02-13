@@ -1,65 +1,91 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Personal Website</title>
+    <meta charset="UTF-8">
+    <title>My Professional Profile</title>
+    <!-- Include CSS framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
-
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <img src="kafleypl.jpg" alt="pushpa's Headshot">
-  </header>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Your Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <div class="navigation">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-  </div>
+    <!-- Header section with name and headshot -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <img src="path_to_your_headshot_image.jpg" alt="Headshot" class="rounded-circle mb-3" width="200">
+            <h1 class="display-4">Your Name</h1>
+            <p class="lead">Professional Profile</p>
+        </div>
+    </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I am passionate about leveraging my skills and experiences to drive innovation and deliver impactful solutions in the field of Information Technology. Please feel free to explore my website to learn more about my work and achievements. If you have any inquiries or would like to connect, please reach out to me via phone or email. Thank you for visiting!.</p>
+    <!-- About section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum metus metus, id lobortis lacus fermentum ut. Sed sagittis nunc eget massa vulputate semper. Fusce sit amet enim bibendum, semper risus at, iaculis arcu. Curabitur nec nunc ultrices, efficitur orci vitae, aliquam mauris.</p>
+        </div>
     </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Master of Science in Information Technology - University of Cincinnati</li>
-        <li>Bachelor's in Computer Science and Information Technology - Tribhuvan University</li>
-      </ul>
+    <!-- Experience section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2>Experience</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum metus metus, id lobortis lacus fermentum ut. Sed sagittis nunc eget massa vulputate semper. Fusce sit amet enim bibendum, semper risus at, iaculis arcu. Curabitur nec nunc ultrices, efficitur orci vitae, aliquam mauris.</p>
+        </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li>DevOps Engineer - Turning Stone (March 2010 - August 2014)</li>
-        <li>Table Games Supervisor - Hard Rock Casino, Cincinnati, OH</li>
-      </ul>
+    <!-- Skills section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2>Skills</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum metus metus, id lobortis lacus fermentum ut. Sed sagittis nunc eget massa vulputate semper. Fusce sit amet enim bibendum, semper risus at, iaculis arcu. Curabitur nec nunc ultrices, efficitur orci vitae, aliquam mauris.</p>
+        </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Cybersecurity and Risk Management</li>
-        <li>Version Control System (Git)</li>
-        <li>Cloud Services (AWS)</li>
-        <li>Orchestration (Docker Swarm & Kubernetes)</li>
-      </ul>
+    <!-- Contact section -->
+    <section id="contact" class="py-5">
+        <divclass="container">
+            <h2>Contact</h2>
+            <p>Email: your@email.com</p>
+            <p>Phone: 123-456-7890</p>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>Contact Information: Phone: (315) 368-5420 | Email: kafleypl@mail.uc.edu</p>
-  </footer>
+    <!-- Footer section -->
+    <footer class="bg-light text-center py-3">
+        <div class="container">
+            &copy; 2024 Your Name
+        </div>
+    </footer>
 
+    <!-- Include JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Include your custom JavaScript code -->
+    <script src="script.js"></script>
 </body>
-
 </html>
