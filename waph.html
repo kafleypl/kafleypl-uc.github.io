@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pushpa Kafley - Personal Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Pushpa Kafley</h1>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="course.html">Web Application Programming and Hacking Course</a>
+        <div id="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Web Application Programming and Hacking Course</a></li>
+            </ul>
         </div>
     </header>
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <img src="kafley-pl.jpg" alt="Pushpa Kafley Headshot">
             <p>Master of Science in Information Technology</p>
             <p>University of Cincinnati</p>
             <p>Bachelor’s Computer Science and Information Technology</p>
             <p>Tribhuvan University, Dharan, Nepal</p>
         </section>
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>Skills & Competencies</h2>
             <ul>
                 <li>Cybersecurity and Risk Management</li>
-                <li>Version Control System: Git</li>
-                <li>Cloud Services: AWS</li>
+                <li>Version Control System: Git (GitHub, Bitbucket)</li>
+                <li>Cloud Services: AWS Services (EC2, VPC, S3, Route53, IAM, RDS, EKS, ECR, & Lambda)</li>
                 <li>Orchestration: Docker Swarm & Kubernetes</li>
                 <li>Database: SQL Server, PostgreSQL, Oracle</li>
-                <li>Familiar with: Python, Groovy, Ruby, YAML, SQL, .Net, html, css, PowerShell</li>
+                <li>Scripting Language: Python, Groovy, Ruby, YAML, SQL, .Net, PowerShell</li>
                 <li>Agile Methodology: Scrum/Kanban</li>
             </ul>
         </section>
@@ -45,6 +49,7 @@
                 <li>Led a team of 7 in managing Software Configuration, Build & Release, ensuring seamless Agile processes.</li>
                 <li>Achieved a 15% improvement in software release cycles, maintaining high-quality deliverables in an Agile framework.</li>
                 <li>Successfully executed changes leveraging Kubernetes and Docker on AWS, resulting significant enhancement in application performance.</li>
+                <li>Familiarized with Jenkins, Nexus, GitHub, Terraform, Ansible, Python, Groovy, Linux, PowerShell, Shell scripting, Bash.</li>
             </ul>
         </section>
         <section id="projects">
@@ -55,12 +60,49 @@
         </section>
         <section id="leadership">
             <h2>Leadership & Extracurricular</h2>
-            <p>Program Coordinator, Bhutanese Community, Des Moines, IA (Non-Profit)</p>
-            <p>President & Program Director, Youth Friendship Center (YFC), Jhapa, Nepal (Non-Profit)</p>
+            <p>Program Coordinator</p>
+            <p>Bhutanese Community, Des Moines, IA (Non-Profit)</p>
+            <p>January 2015 - June 2017</p>
+            <ul>
+                <li>Organized data for decision-making, supervised and mentored over 2000 youths, and managed budgeting and funds for community programs.</li>
+            </ul>
+            <p>President & Program Director</p>
+            <p>Youth Friendship Center (YFC), Jhapa, Nepal (Non-profit)</p>
+            <p>November 2006 - May 2008</p>
+            <ul>
+                <li>Directed drug intervention programs for over a thousand youths, controlled a $20,000 budget annually for three years, and facilitated successful drug rehabilitation programs for over 500 youths.</li>
+            </ul>
         </section>
     </main>
     <footer>
-        <p>Contact: Phone: (315) 368-5420 | Email: kafleypl@mail.uc.edu</p>
+        <!-- Email and Phone Number (Show/Hide functionality) -->
+        <p id="contact-info">Contact: <span id="email">kafleypl@mail.uc.edu</span> | <span id="phone">(315) 368-5420</span></p>
+        <button onclick="toggleContact()">Toggle Contact Info</button>
+        <!-- Page Tracker -->
+        <p>Page Tracker:</p>
+        <ul>
+            <li><a href="https://analytics.withgoogle.com/">Google Analytics</a></li>
+            <li><a href="https://flagcounter.com/">Flag Counter</a></li>
+        </ul>
     </footer>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        function toggleContact() {
+            var email = document.getElementById("email");
+            var phone = document.getElementById("phone");
+
+            if (email.style.display === "none") {
+                email.style.display = "inline";
+                phone.style.display = "inline";
+            } else {
+                email.style.display = "none";
+                phone.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
