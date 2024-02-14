@@ -4,180 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pushpa Kafley - Personal Website</title>
+    <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function checkCookie() {
+            const username = getCookie("kafleypl");
+            if (username) {
+                const lastVisit = new Date(parseInt(username)).toLocaleString();
+                alert("Welcome back! Your last visit was " + lastVisit);
+            } else {
+                alert("Welcome to my homepage!");
+                const currentTime = new Date().getTime();
+                setCookie("kafleypl", currentTime, 365); // Remember for 1 year
+            }
+        }
+
+        checkCookie();
+    </script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://waph-uc.github.io/style1.css">
+    <style type="text/css">
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .round {
+            border-radius: 8px;
+        }
+
+        #response {
+            background-color: #ff9800;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Pushpa Kafley's Personal Website</h1>
-    </header>
-    <main>
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2>About Me</h2>
-                        <p>I am Pushpa Kafley, a dedicated and highly motivated individual in the field of Information Technology. Currently pursuing a Master of Science in Information Technology at University of Cincinnati, I am passionate about cybersecurity and risk management, cloud services, and DevOps practices.</p>
-                        <p>Contact me at: <a href="mailto:kafleypl@mail.uc.edu">kafleypl@mail.uc.edu</a></p>
-                        <div id="digit-clock"></div>
+<header>
+    <h1>Welcome to Pushpa Kafley's Personal Website</h1>
+</header>
+<div class="Section">
+    <h2>Web Application Programming and Hacking</h2>
+    <p>For more information, please visit the link <a href="course.html">Course Page</a>.</p>
+</div>
+<div class="wrapper">
+        <div id="menubar">
+            <h3>Student: Pushpa Kafley</h3>
+            <div id="email" onclick="showhideEmail()">Show my email</div>
+            <script type="text/javascript" src="email.js"></script>
+            <img src="images/kafley-pl.jpg" alt="My headshot" width="50" height="50">
+            <canvas id="analog-clock" width="150" height="150" style="background: #999"></canvas>
+            <script src="analog-clock.js"></script>
+        </div>
+
+<main>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>About Me</h2>
+                    <p>I am Pushpa Kafley, a dedicated and highly motivated individual in the field of Information Technology. Currently pursuing a Master of Science in Information Technology at the University of Cincinnati, I am passionate about cybersecurity and risk management, cloud services, and DevOps practices.</p>
+                   
+                <div class="col-md-6">
+                    <img src="kafley-pl.jpg" alt="Kafley headshot">
+                    <!-- Joke API integration-->
+                    <div>
+                        <b>Random programming Joke:</b>
+                        <p id="joke"></p>
                         <script>
-                            function displayTime() {
-                                document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
+                            function fetchJoke() {
+                                fetch('https://v2.jokeapi.dev/joke/Any')
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        // Display the joke on the page
+                                        document.getElementById('joke').innerHTML = data.setup + ' ' + data.delivery;
+                                    })
+                                    .catch(error => console.error('Error fetching joke:', error));
                             }
 
-                            setInterval(displayTime, 500);
+                            // Fetch joke every minute
+                            setInterval(fetchJoke, 60000);
+                            // Initial fetch when the page loads
+                            fetchJoke();
                         </script>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="kafley-pl.jpg" alt="Pushpa Kafley">
-                        <canvas id="analog-clock" width="150" height="150" style="background: #999"></canvas>
-                        <script src="analog-clock.js"></script>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="Education">
-            <div class="container">
-                <h2>Education</h2>
-                <p>Master of Science in Information Technology</p>
-                <p>University of Cincinnati (2023-Present)</p>
-                <p>Bachelor’s Computer Science and Information Technology</p>
-                <p>Tribhuvan University, Dharan, Nepal (2009)</p>
-            </div>
-        </section>
-        <section id="skills">
-            <div class="container">
-                <h2>Skills & Competencies</h2>
-                <ul>
-                    <li>Cybersecurity and Risk Management</li>
-                    <li>Version Control System: Git (GitHub, Bitbucket)</li>
-                    <li>Cloud Services: AWS Services (EC2, VPC, S3, Route53, IAM, RDS, EKS, ECR, & Lambda)</li>
-                    <li>Orchestration: Docker Swarm & Kubernetes</li>
-                    <li>Database: SQL Server, PostgreSQL, Oracle</li>
-                    <li>Familiar with: Python, Groovy, Ruby, YAML, SQL, .Net, css, html, Javascript, PowerShell</li>
-                    <li>Agile Methodology: Scrum/Kanban</li>
-                </ul>
-            </div>
-        </section>
-        <section id="Professional Experience">
-            <div class="container">
-                <h2>Professional Experience</h2>
-                <p>DevOps Engineer</p>
-                <p>Turning Stone, Oneida, NY</p>
-                <p>March 2010 - August 2014</p>
-                <ul>
-                    <li>Implemented an automated provisioning system, reducing deployment times by 20% across diverse environments.</li>
-                    <li>Led a team of 7 in managing Software Configuration, Build & Release, ensuring seamless Agile processes.</li>
-                    <li>Successfully executed changes leveraging Kubernetes and Docker on AWS, resulting significant enhancement in application performance.</li>
-                    <li>Familiarized with Jenkins, Nexus, GitHub, Terraform, Ansible, Python, Groovy, Linux, PowerShell, Shell scripting, Bash.</li>
-                </ul>
-            </div>
-        </section>
-        <section id="Projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <p>Student Marketplace</p>
-                <p>Table Games Supervisor, Hard Rock Casino, Cincinnati, OH</p>
-                <p>HCI/UX design Project, University of Cincinnati</p>
-            </div>
-        </section>
-        <section id="Leadership">
-            <div class="container">
-                <h2>Leadership & Extracurricular</h2>
-                <p>Program Coordinator</p>
-                <p>Bhutanese Community, Des Moines, IA (Non-Profit)</p>
-                <p>January 2015 - June 2017</p>
-                <ul>
-                    <li>Organized data for decision-making, supervised and mentored over 2000 youths, and managed budgeting and funds for community programs.</li>
-                </ul>
-                <p>President & Program Director</p>
-                <p>Youth Friendship Center (YFC), Jhapa, Nepal (Non-profit)</p>
-                <p>November 2006 - May 2008</p>
-                <ul>
-                    <li>Directed drug intervention programs for over a thousand youths, controlled a $20,000 budget annually for three years, and facilitated successful drug rehabilitation programs for over 500 youths.</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <!-- Email and Phone Number (Show/Hide functionality) -->
-        <div class="container">
-            <p id="contact-info">Contact: <span id="email">kafleypl@mail.uc.edu</span> | <span id="phone">(315) 368-5420</span></p>
-            <button onclick="toggleContact()">Toggle Contact Info</button>
         </div>
-        <!-- Page Tracker -->
+    </section>
+    <section id="education">
         <div class="container">
-            <p>Page Tracker:</p>
+            <h2>Education</h2>
+            <p>Master of Science in Information Technology   University of Cincinnati (2023-Present)</p>
+            <p>Bachelor’s Computer Science and Information Technology   Tribhuvan University, Dharan, Nepal (2009)</p>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Competencies</h2>
             <ul>
-                <li><a href="https://analytics.withgoogle.com/">Google Analytics</a></li>
-                <li><a href="https://flagcounter.com/">Flag Counter</a></li>
+                <li>Cybersecurity and Risk Management</li>
+                <li>Version Control System: Git (GitHub, Bitbucket)</li>
+                <li>Cloud Services: AWS Services (EC2, VPC, S3, Route53, IAM, RDS, EKS, ECR, & Lambda)</li>
+                <li>Orchestration: Docker Swarm & Kubernetes</li>
+                <li>Database: SQL Server, PostgreSQL, Oracle</li>
+                <li>Familiar with: Python, Groovy, Ruby, YAML, SQL, .Net, CSS, HTML, JavaScript, PowerShell</li>
+                <li>Agile Methodology: Scrum/Kanban</li>
             </ul>
         </div>
-    </footer>
+    </section>
+    <section id="professional-experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <p>DevOps Engineer</p>
+            <p>Turning Stone, Oneida, NY</p>
+            <p>March 2010 - August 2014</p>
+            <ul>
+                <li>Implemented an automated provisioning system, reducing deployment times by 20% across diverse environments.</li>
+                <li>Led a team of 7 in managing Software Configuration, Build & Release, ensuring seamless Agile processes.</li>
+                <li>Successfully executed changes leveraging Kubernetes and Docker on AWS, resulting significant enhancement in application performance.</li>
+                <li>Familiarized with Jenkins, Nexus, GitHub, Terraform, Ansible, Python, Groovy, Linux, PowerShell, Shell scripting, Bash.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="Other Experience">
+        <div class="container">
+            <h2>Other Experience</h2>
+            <p>Table Games Supervisor, Hard Rock Casino, Cincinnati, OH  2021-Present</p>
+            <ul>
+                <li>Supervised team of 300 staff, coaching for personal and professional growth</li>
+            </ul>
+        </div
+    </section>
+    <section id="Projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <p>Student Marketplace   Fall 2023</p>
+            <p>HCI/UX design Project, University of Cincinnati</p>
+        </div>
+    </section>
+    <section id="Leadership">
+        <div class="container">
+            <h2>Leadership & Extracurricular  January 2015 - June 2017</h2>
+            <p>Program Coordinator</p>
+            <p>Bhutanese Community, Des Moines, IA (Non-Profit)</p>
+            <ul>
+                <li>Organized data for decision-making, supervised and mentored over 2000 youths, and managed budgeting and funds for community programs.</li>
+            </ul>
 
-    <!-- Bootstrap JS (optional) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
+        </div>
+    </section>
+    <img id="graphicContainer" src="https://weatherbit.io" alt="Graphic">
     <script>
-        function toggleContact() {
-            var email = document.getElementById('email');
-            var phone = document.getElementById('phone');
-            if (email.style.display === 'none') {
-                email.style.display = 'inline';
-                phone.style.display = 'inline';
-            } else {
-                email.style.display = 'none';
-                phone.style.display = 'none';
-            }
+  function getGraphic() {
+    fetch('https://weatherbit.io')
+      .then(response => response.json())
+      .then(data => {
+        const graphicContainer = document.getElementById('graphicContainer');
+        graphicContainer.src = data.imageUrl;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
+  // Call getGraphic() to fetch and display the graphic
+  getGraphic();
+</script>
+
+</main>
+<footer>
+    <!-- Contact Information with Show/Hide button -->
+    <div class="container">
+        <p id="contact-info">Contact: <span id="email">kafleypl@mail.uc.edu</span> | <span id="phone">(315) 368-5420</span></p>
+        <button onclick="toggleContact()">Toggle Contact Info</button>
+    </div>
+    <!-- Page Tracker Links -->
+    <div class="container">
+        <p>Page Tracker:</p>
+        <ul>
+            <li><a href="https://analytics.withgoogle.com/">Google Analytics</a></li>
+            <li><a href="https://flagcounter.com/">Flag Counter</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Moment.js for date/time manipulation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<!-- Custom JavaScript -->
+<script>
+    // Function to toggle contact info visibility
+    function toggleContact() {
+        var email = document.getElementById('email');
+        var phone = document.getElementById('phone');
+        if (email.style.display === 'none') {
+            email.style.display = 'inline';
+            phone.style.display = 'inline';
+        } else {
+            email.style.display = 'none';
+            phone.style.display = 'none';
         }
-    </script>
-    <!-- Joke API Integration -->
-    <script>
-        function fetchJoke() {
-            fetch('https://v2.jokeapi.dev/joke/Any')
-                .then(response => response.json())
-                .then(data => {
-                    // Display the joke on the page
-                    document.getElementById('joke').innerHTML = data.setup + ' ' + data.delivery;
-                })
-                .catch(error => console.error('Error fetching joke:', error));
-        }
+    }
 
-        // Fetch joke every minute
-        setInterval(fetchJoke, 60000);
+    // Function to update digital clock
+    function updateDigitalClock() {
+        var now = moment().format('MMMM Do YYYY, h:mm:ss a');
+        document.getElementById('digital-clock').textContent = 'Current time: ' + now;
+    }
 
-        // Initial fetch when the page loads
-        fetchJoke();
-    </script>
-    <!-- Public API with Graphics Integration -->
-    <script>
-        fetch('https://xkcd.com/info.0.json')
-            .then(response => response.json())
-            .then(data => {
-                // Display the comic image on the page
-                document.getElementById('comic').src = data.img;
-                document.getElementById('comic').alt = data.alt;
-            })
-            .catch(error => console.error('Error fetching comic:', error));
-    </script>
-    <!-- JavaScript Cookies -->
-    <script>
-        function checkFirstVisit() {
-            var lastVisit = localStorage.getItem('lastVisit');
-            if (lastVisit) {
-                document.getElementById('welcome-message').innerText = 'Welcome back! Your last visit was ' + lastVisit;
-            } else {
-                var currentDate = new Date().toLocaleString();
-                localStorage.setItem('lastVisit', currentDate);
-                document.getElementById('welcome-message').innerText = 'Welcome to my homepage!';
-            }
-        }
+    // Toggle contact info on button click
+    document.getElementById('email').style.display = 'none';
+    document.getElementById('phone').style.display = 'none';
+    document.getElementById('digital-clock').textContent = 'Current time: ' + moment().format('MMMM Do YYYY, h:mm:ss a');
+    setInterval(updateDigitalClock, 1000);
 
-        // Check first visit when the page loads
-        checkFirstVisit();
-    </script>
+   
+</script>
 </body>
 </html>
