@@ -197,11 +197,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script>
         function toggleEmail() {
-            var emailElement = document.getElementById('email');
-            if (emailElement.style.display === 'none') {
-                emailElement.style.display = 'inline';
+            var emailElement = document.getElementById('toggle-email');
+            if (emailElement.textContent === 'Show my email') {
+                emailElement.textContent = 'Hide my email';
             } else {
-                emailElement.style.display = 'none';
+                emailElement.textContent = 'Show my email';
             }
         }
 
@@ -227,6 +227,30 @@
 
         setInterval(fetchJoke, 60000);
         fetchJoke();
+    </script>
+    <script>
+        // Analog clock
+        var hourHand = document.querySelector('.hour');
+        var minuteHand = document.querySelector('.minute');
+        var secondHand = document.querySelector('.second');
+
+        function rotateHands() {
+            var now = new Date();
+            var hours = now.getHours() % 12;
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            var hourDeg = (hours * 30) + (0.5 * minutes); // Each hour makes 30 degrees, each minute makes 0.5 degrees
+            var minuteDeg = (minutes * 6) + (0.1 * seconds); // Each minute makes 6 degrees, each second makes 0.1 degrees
+            var secondDeg = seconds * 6; // Each second makes 6 degrees
+
+            hourHand.style.transform = `rotate(${hourDeg}deg)`;
+            minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+            secondHand.style.transform = `rotate(${secondDeg}deg)`;
+        }
+
+        setInterval(rotateHands, 1000); // Update every second
+        rotateHands(); // Initial call to set the initial position
     </script>
 </body>
 
