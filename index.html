@@ -31,6 +31,35 @@
         }
     </style>
 </head>
+    <script>
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function checkCookie() {
+        const username = getCookie("username");
+        if (username) {
+            const lastVisit = new Date(parseInt(username)).toLocaleString();
+            alert("Welcome back! Your last visit was " + lastVisit);
+        } else {
+            alert("Welcome to my homepage!");
+            const currentTime = new Date().getTime();
+            setCookie("username", currentTime, 365); // Remember for 1 year
+        }
+    }
+
+    checkCookie();
+</script>
+
 <body>
 <header>
     <h1>Welcome to Pushpa Kafley's Personal Website</h1>
@@ -152,7 +181,7 @@
         function getGraphic() {
             fetch('https://www.weatherbit.io', {
                 headers: {
-                    'Authorization': 'Bearer ea753a9372da44a68a0043e6eb1e9f82'
+                    'Authorization': 'ea753a9372da44a68a0043e6eb1e9f82'
                 }
             })
             .then(response => response.json())
@@ -217,37 +246,6 @@
     document.getElementById('phone').style.display = 'none';
     document.getElementById('digital-clock').textContent = 'Current time: ' + moment().format('MMMM Do YYYY, h:mm:ss a');
     setInterval(updateDigitalClock, 1000);
-
-   
-</script>
-    <script>
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
-
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
-
-    function checkCookie() {
-        const username = getCookie("username");
-        if (username) {
-            const lastVisit = new Date(parseInt(username)).toLocaleString();
-            alert("Welcome back! Your last visit was " + lastVisit);
-        } else {
-            alert("Welcome to my homepage!");
-            const currentTime = new Date().getTime();
-            setCookie("username", currentTime, 365); // Remember for 1 year
-        }
-    }
-
-    checkCookie();
-</script>
 
 </body>
 </html>
