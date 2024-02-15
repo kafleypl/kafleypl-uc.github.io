@@ -28,6 +28,40 @@
         #response {
             background-color: #ff9800;
         }
+
+        .clock {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border: 10px solid #333;
+            border-radius: 50%;
+            margin: 20px auto;
+            background: white;
+        }
+
+        .hour,
+        .minute,
+        .second {
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background: black;
+            transform-origin: 100%;
+            transition: transform 0.5s cubic-bezier(0.4, 2.1, 0.7, 0.9);
+        }
+
+        .hour {
+            height: 5px;
+            background: #333;
+        }
+
+        .minute {
+            background: #666;
+        }
+
+        .second {
+            background: #ff4f40;
+        }
     </style>
 </head>
 
@@ -128,30 +162,26 @@
                 </ul>
             </div>
         </section>
-        <img id="graphicContainer" src="https://www.weatherbit.io/static/img/icons/r01d.png" alt="Graphic">
+        <img id="weather-graphic" src="" alt="Weather Graphic">
         <script>
-            function getGraphic() {
-                fetch('https://www.weatherbit.io/v2.0/current?city=Cincinnati,OH&key=ea753a9372da44a68a0043e6eb1e9f82')
+            function getWeatherGraphic() {
+                fetch('https://api.weatherbit.io/v2.0/current?city=Cincinnati,OH&key=ea753a9372da44a68a0043e6eb1e9f82')
                     .then(response => response.json())
                     .then(data => {
-                        const weatherIcon = data.data[0].weather.icon;
-                        const graphicContainer = document.getElementById('graphicContainer');
-                        graphicContainer.src = `https://www.weatherbit.io/static/img/icons/${weatherIcon}.png`;
+                        const weatherGraphic = document.getElementById('weather-graphic');
+                        weatherGraphic.src = `https://www.weatherbit.io/static/img/icons/${data.data[0].weather.icon}.png`;
                     })
                     .catch(error => {
                         console.error('Error:', error);
                     });
             }
 
-            getGraphic();
+            // Call getWeatherGraphic() to fetch and display the weather graphic
+            getWeatherGraphic();
         </script>
+
     </main>
     <footer>
-        <!-- Contact Information with Show/Hide button -->
-        <div class="container">
-            <p id="contact-info">Contact: <span id="email" style="display:none;">kafleypl@mail.uc.edu</span> | <span id="phone">(315) 368-5420</span></p>
-            <button onclick="toggleContact()">Toggle Contact Info</button>
-        </div>
         <!-- Page Tracker Links -->
         <div class="container">
             <p>Page Tracker:</p>
@@ -175,23 +205,12 @@
             }
         }
 
-        function toggleContact() {
-            var email = document.getElementById('email');
-            var phone = document.getElementById('phone');
-            if (email.style.display === 'none') {
-                email.style.display = 'inline';
-                phone.style.display = 'inline';
-            } else {
-                email.style.display = 'none';
-                phone.style.display = 'none';
-            }
-        }
-
         function updateDigitalClock() {
             var now = moment().format('MMMM Do YYYY, h:mm:ss a');
             document.getElementById('digital-clock').textContent = 'Current time: ' + now;
         }
 
+        // Toggle contact info on button click
         document.getElementById('email').style.display = 'none';
         document.getElementById('phone').style.display = 'none';
         document.getElementById('digital-clock').textContent = 'Current time: ' + moment().format('MMMM Do YYYY, h:mm:ss a');
