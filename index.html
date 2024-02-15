@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -42,7 +42,7 @@
     <div class="wrapper">
         <div id="menubar">
             <h3>Student: Pushpa Kafley</h3>
-            <div id="email" onclick="showHideEmail()">Show my email</div>
+            <div id="toggle-email" class="button round" onclick="toggleEmail()">Show my email</div>
             <img src="kafley-pl.jpg" alt="My headshot" width="100" height="100">
             <canvas id="analog-clock" width="150" height="150" style="background: #999"></canvas>
             <p id="digital-clock" style="text-align: right; font-size: 16px;"></p>
@@ -149,7 +149,7 @@
     <footer>
         <!-- Contact Information with Show/Hide button -->
         <div class="container">
-            <p id="contact-info">Contact: <span id="email">kafleypl@mail.uc.edu</span> | <span id="phone">(315) 368-5420</span></p>
+            <p id="contact-info">Contact: <span id="email" style="display:none;">kafleypl@mail.uc.edu</span> | <span id="phone">(315) 368-5420</span></p>
             <button onclick="toggleContact()">Toggle Contact Info</button>
         </div>
         <!-- Page Tracker Links -->
@@ -166,7 +166,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script>
-        function showHideEmail() {
+        function toggleEmail() {
             var emailElement = document.getElementById('email');
             if (emailElement.style.display === 'none') {
                 emailElement.style.display = 'inline';
