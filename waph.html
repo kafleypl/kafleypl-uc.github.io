@@ -1,38 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pushpa Kafley - Personal Website</title>
-    <script>
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-        }
-
-        function setCookie(name, value, days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            const expires = "expires=" + date.toUTCString();
-            document.cookie = name + "=" + value + ";" + expires + ";path=/";
-        }
-
-        function checkCookie() {
-            const username = getCookie("username");
-            if (username) {
-                const lastVisit = new Date(parseInt(username)).toLocaleString();
-                alert("Welcome back! Your last visit was " + lastVisit);
-            } else {
-                alert("Welcome to my homepage!");
-                const currentTime = new Date().getTime();
-                setCookie("username", currentTime, 365); // Remember for 1 year
-            }
-        }
-
-        checkCookie();
-    </script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
@@ -68,9 +39,7 @@
     <h2>Web Application Programming and Hacking</h2>
     <p>For more information, please visit the link <a href="course.html">Course Page</a>.</p>
 </div>
-<<<<<<< HEAD
 <div class="wrapper">
-<<<<<<< HEAD
     <div id="menubar">
         <h3>Student: Pushpa Kafley</h3>
         <div id="email" onclick="showhideEmail()">Show my email</div>
@@ -80,42 +49,6 @@
         <script src="analog-clock.js"></script>
     </div>
 </div>
-=======
-        <div id="menubar">
-            <h3>Student: Pushpa Kafley</h3>
-            <script type="text/javascript" src="email.js"></script>
-            <p id="digital-clock">Current time: </p>
-            <div id="email" onclick="showhideEmail()">Show my email</div>
-            <script type="text/javascript" src="email.js"></script>
-            <button onclick="showEmail()">Send Email</button>
-=======
-<div id="digit-clock"></div>
->>>>>>> 0844ac0 ( updated waph.html amd course.html)
-            <script>
-                function displayTime() {
-                    document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
-                }
-
-<<<<<<< HEAD
-            <img src="images/kafley-pl.jpg" alt="My headshot" width="50" height="50">
-            <canvas id="analog-clock" width="150" height="150" style="background: #999"></canvas>
-            <script src="analog-clock.js"></script>
-        </div>
->>>>>>> 9046d33 ( update)
-=======
-                setInterval(displayTime, 500);
-            </script>
-<div class="wrapper">
-    <div id="menubar">
-        <h3>Student: Pushpa Kafley</h3>
-        
-        <img src="kafley-pl.jpg" alt="My headshot" width="150" height="150">
-        <canvas id="analog-clock" width="150" height="150" style="background: #999"></canvas>
-        <script src="analog-clock.js"></script>
-    </div>
-</div>
->>>>>>> 0844ac0 ( updated waph.html amd course.html)
-
 <main>
     <section id="about">
         <div class="container">
@@ -146,11 +79,9 @@
                             fetchJoke();
                         </script>
                     </div>
-<<<<<<< HEAD
-=======
                     <div id="email" onclick="showhideEmail()">Show my email</div>
                     <script type="text/javascript" src="email.js"></script>
->>>>>>> 0844ac0 ( updated waph.html amd course.html)
+                    
                     <!-- Weather API integration-->
                     <div>
                         <b>Weather Information:</b>
@@ -177,90 +108,72 @@
         </div>
     </section>
     <!-- Education Section -->
-<section id="education">
-    <div class="container">
-        <h2>Education</h2>
-        <p>Master of Science in Information Technology   University of Cincinnati (2023-Present)</p>
-        <p>Bachelor’s Computer Science and Information Technology   Tribhuvan University, Dharan, Nepal (2009)</p>
-    </div>
-</section>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0844ac0 ( updated waph.html amd course.html)
-<!-- Skills Section -->
-<section id="skills">
-    <div class="container">
-        <h2>Skills & Competencies</h2>
-        <ul>
-            <li>Cybersecurity and Risk Management</li>
-            <li>Version Control System: Git (GitHub, Bitbucket)</li>
-            <li>Cloud Services: AWS Services (EC2, VPC, S3, Route53, IAM, RDS, EKS, ECR, & Lambda)</li>
-            <li>Orchestration: Docker Swarm & Kubernetes</li>
-            <li>Database: SQL Server, PostgreSQL, Oracle</li>
-            <li>Familiar with: Python, Groovy, Ruby, YAML, SQL, .Net, CSS, HTML, JavaScript, PowerShell</li>
-            <li>Agile Methodology: Scrum/Kanban</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Professional Experience Section -->
-<section id="professional-experience">
-    <div class="container">
-        <h2>Professional Experience</h2>
-        <p>DevOps Engineer</p>
-        <p>Turning Stone, Oneida, NY</p>
-        <p>March 2010 - August 2014</p>
-        <ul>
-            <li>Implemented an automated provisioning system, reducing deployment times by 20% across diverse environments.</li>
-            <li>Led a team of 7 in managing Software Configuration, Build & Release, ensuring seamless Agile processes.</li>
-            <li>Successfully executed changes leveraging Kubernetes and Docker on AWS, resulting significant enhancement in application performance.</li>
-            <li>Familiarized with Jenkins, Nexus, GitHub, Terraform, Ansible, Python, Groovy, Linux, PowerShell, Shell scripting, Bash.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Other Experience Section -->
-<section id="other-experience">
-    <div class="container">
-        <h2>Other Experience</h2>
-        <p>Table Games Supervisor, Hard Rock Casino, Cincinnati, OH  2021-Present</p>
-        <ul>
-            <li>Supervised team of 300 staff, coaching for personal and professional growth</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects">
-    <div class="container">
-        <h2>Projects</h2>
-        <p>Student Marketplace   Fall 2023</p>
-        <p>HCI/UX design Project, University of Cincinnati</p>
-    </div>
-</section>
-
-<!-- Leadership Section -->
-<section id="leadership">
-    <div class="container">
-        <h2>Leadership & Extracurricular  January 2015 - June 2017</h2>
-        <p>Program Coordinator</p>
-        <p>Bhutanese Community, Des Moines, IA (Non-Profit)</p>
-        <ul>
-            <li>Organized data for decision-making, supervised and mentored over 2000 youths, and managed budgeting and funds for community programs.</li>
-        </ul>
-    </div>
-</section>
-<<<<<<< HEAD
-=======
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <p>Master of Science in Information Technology   University of Cincinnati (2023-Present)</p>
+            <p>Bachelor’s Computer Science and Information Technology   Tribhuvan University, Dharan, Nepal (2009)</p>
         </div>
     </section>
-    <main>
->>>>>>> 9046d33 ( update)
-=======
->>>>>>> 0844ac0 ( updated waph.html amd course.html)
-
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Competencies</h2>
+            <ul>
+                <li>Cybersecurity and Risk Management</li>
+                <li>Version Control System: Git (GitHub, Bitbucket)</li>
+                <li>Cloud Services: AWS Services (EC2, VPC, S3, Route53, IAM, RDS, EKS, ECR, & Lambda)</li>
+                <li>Orchestration: Docker Swarm & Kubernetes</li>
+                <li>Database: SQL Server, PostgreSQL, Oracle</li>
+                <li>Familiar with: Python, Groovy, Ruby, YAML, SQL, .Net, CSS, HTML, JavaScript, PowerShell</li>
+                <li>Agile Methodology: Scrum/Kanban</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Professional Experience Section -->
+    <section id="professional-experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <p>DevOps Engineer</p>
+            <p>Turning Stone, Oneida, NY</p>
+            <p>March 2010 - August 2014</p>
+            <ul>
+                <li>Implemented an automated provisioning system, reducing deployment times by 20% across diverse environments.</li>
+                <li>Led a team of 7 in managing Software Configuration, Build & Release, ensuring seamless Agile processes.</li>
+                <li>Successfully executed changes leveraging Kubernetes and Docker on AWS, resulting significant enhancement in application performance.</li>
+                <li>Familiarized with Jenkins, Nexus, GitHub, Terraform, Ansible, Python, Groovy, Linux, PowerShell, Shell scripting, Bash.</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Other Experience Section -->
+    <section id="other-experience">
+        <div class="container">
+            <h2>Other Experience</h2>
+            <p>Table Games Supervisor, Hard Rock Casino, Cincinnati, OH  2021-Present</p>
+            <ul>
+                <li>Supervised team of 300 staff, coaching for personal and professional growth</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <p>Student Marketplace   Fall 2023</p>
+            <p>HCI/UX design Project, University of Cincinnati</p>
+        </div>
+    </section>
+    <!-- Leadership Section -->
+    <section id="leadership">
+        <div class="container">
+            <h2>Leadership & Extracurricular  January 2015 - June 2017</h2>
+            <p>Program Coordinator</p>
+            <p>Bhutanese Community, Des Moines, IA (Non-Profit)</p>
+            <ul>
+                <li>Organized data for decision-making, supervised and mentored over 2000 youths, and managed budgeting and funds for community programs.</li>
+            </ul>
+        </div>
+    </section>
 </main>
 <footer>
     <!-- Contact Information with Show/Hide button -->
@@ -310,9 +223,6 @@
     document.getElementById('digital-clock').textContent = 'Current time: ' + moment().format('MMMM Do YYYY, h:mm:ss a');
     setInterval(updateDigitalClock, 1000);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     // Check if the client is visiting for the first time using cookies
     if (document.cookie.indexOf("username") < 0) {
         alert('Welcome to my homepage!');
@@ -321,16 +231,6 @@
         const lastVisit = new Date(parseInt(getCookie("username"))).toLocaleString();
         alert("Welcome back! Your last visit was " + lastVisit);
     }
-
-    // Fetch random comic from xkcd API
-    $.getJSON('https://xkcd.com/info.0.json', function(data) {
-        $('#comic').attr('src', data.img);
-    });
-
-    // Fetch weather information using the Weather API
-    $.getJSON('https://api.weatherapi.com/v1/current.json?key=ea753a9372da44a68a0043e6eb1e9f82&q=London', function(data) {
-        $('#weather-info').html('Current Weather: ' + data.current.condition.text);
-    });
 
     function getCookie(name) {
         const value = `; ${document.cookie}`;
@@ -344,9 +244,6 @@
         const expires = "expires=" + date.toUTCString();
         document.cookie = name + "=" + value + ";" + expires + ";path=/";
     }
->>>>>>> 9046d33 ( update)
-=======
->>>>>>> 0844ac0 ( updated waph.html amd course.html)
 </script>
 </body>
 </html>
